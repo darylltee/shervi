@@ -236,8 +236,15 @@
 									$resulta = mysql_query("SELECT * FROM customer WHERE transaction='$dddd'");
 									while($rowa = mysql_fetch_array($resulta))
 										{
-									echo '<td><div align="right">'.$row['status'].'</div></td>'; 
-									echo '<td><div align="center"><a rel="facebox" href="editstatus.php?id='.$row['id'].'">Edit</a> | <a href="#" id="'.$row['transaction'].'" class="delbutton" title="Click To Delete">delete</a></div></td>';
+									
+										echo "<br><br>";
+									echo '<td><div align="right">'.$rowa['status'].'</div></td>'; 
+
+								
+
+									echo '<td><div align="center"><a rel="facebox" href="editstatus.php?id='.$rowa['id'].'">Edit</a> | <a href="#" id="'.$row['transaction'].'" class="delbutton" title="Click To Delete">delete</a> | 
+									<a href="print.php?id='.$rowa['id'].'" 	 class="printbutton" title="Click To Print">print</a></div></td>';
+
 									echo '</tr>';
 								}
 							}
