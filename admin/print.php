@@ -31,7 +31,7 @@ function Clickheretoprint()
   
   var docprint=window.open("","",disp_setting); 
    docprint.document.open(); 
-   docprint.document.write('<html><head><title>Inel Power System</title>'); 
+   docprint.document.write('<html><head><title>Cox Rest House and Beach Resort</title>'); 
    docprint.document.write('</head><body onLoad="self.print()" style="width: 400px; font-size:12px; font-family:arial;">');          
    docprint.document.write(content_vlue);          
    docprint.document.write('</body></html>'); 
@@ -39,7 +39,7 @@ function Clickheretoprint()
    docprint.focus(); 
 }
 </script>
-Print <br><br>
+<br><br>
 <a class="home" href="javascript:Clickheretoprint()">Print</a>
 <div id="print_content" style="width: 400px;">
 <strong>Reservation Details</strong><br><br>
@@ -60,6 +60,7 @@ while($row = mysql_fetch_array($result))
 		echo 'Name: '.$row['fname'].' '.$row['lname'].'<br>';
 		echo 'Address: '.$row['address'].'<br>';
 		echo 'Contact: '.$row['contact'].'<br>';
+
 		
 	}
 }

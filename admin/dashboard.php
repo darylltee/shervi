@@ -108,7 +108,8 @@
 									while($rowa = mysql_fetch_array($resulta))
 										{
 									echo '<td><div align="right">'.$row['status'].'</div></td>'; 
-									echo '<td><div align="center"><a rel="facebox" href="editstatus.php?id='.$row['id'].'">Edit</a> | <a href="#" id="'.$row['transaction'].'" class="delbutton" title="Click To Delete">delete</a> | <a href="print.php" id="'.$row['date'].'" class="printbutton" title="Click To Print">print</a></div></td>';
+									echo '<td><div align="center"><a rel="facebox" href="editstatus.php?id='.$row['id'].'">Edit</a> | <a href="#" id="'.$row['transaction'].'" class="delbutton" title="Click To Delete">delete</a> | 
+									<a href="print.php?" id="'.$row['date'].'" class="printbutton" title="Click To Print">print</a></div></td>';
 									echo '</tr>';
 								}
 							}
