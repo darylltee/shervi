@@ -35,6 +35,5 @@ height: 34px;
 					<option>4</option>
 					<option> </option>
 				</select><br>
-	Price:<br><input type="text" name="price" class="ed"><br>
 	<input type="submit" value="Save" id="button1">
 </form>

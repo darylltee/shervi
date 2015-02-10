@@ -17,7 +17,7 @@ body
 div.homelogo
 {
 	position:absolute;
-	left:50px;
+	left:57px;
 	top:5px;
 }
 </style>
@@ -31,8 +31,8 @@ div.homelogo
         <ul id="mainnav">
 			    <li><a href="index.php">Home</a></li>
 				<li><a href="gallery.php">Gallery</a></li>
-				<li><a href=".php">Location</a></li>				
-				<li><a href="contact.php">Contact Us</a></li>
+				<li><a href="location.php">Location</a></li>				
+				<li class="current"><a href="contact.php">Contact Us</a></li>
 				<li><a href="otherinfo.php">Other Info</a></li>
     	</ul>
 	</div>
@@ -43,8 +43,8 @@ div.homelogo
 				<div style="text-align:center;">
 					<h3>Cox Rest House and Beach Resort</h3><br>
 				</div>
-<h2><font color="black">MANAGER: REYNITA "ROSE" COX</font></h2><br>
-<h2><font color="black">PHONE NUMBER:  +63920-291-2303</font></h2><br><br>
+<h2><font color="black">OWNER: RAYNITA "ROSE" COX</font></h2><br>
+<h2><font color="black">PHONE NUMBER:  +63920-219-2303</font></h2><br><br>
 
 
 				</div><br>

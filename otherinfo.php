@@ -17,7 +17,7 @@ body
 div.homelogo
 {
 	position:absolute;
-	left:50px;
+	left:57px;
 	top:5px;
 }
 </style>
@@ -31,9 +31,9 @@ div.homelogo
         <ul id="mainnav">
 			<li><a href="index.php">Home</a></li>
             <li><a href="gallery.php">Gallery</a></li>
-			<li><a href=".php">Location</a></li>				
+			<li><a href="location.php">Location</a></li>				
 			<li><a href="contact.php">Contact Us</a></li>
-			<li><a href="otherinfo.php">Other Info</a></li>
+			<li class="current"><a href="otherinfo.php">Other Info</a></li>
     	</ul>
 	</div>
     <div id="content">
