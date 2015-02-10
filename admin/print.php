@@ -9,7 +9,7 @@
 
 	body
 	{
-		background-image:url('bg.jpg');
+		background-image:url('');
 		background-attachment:fixed;
 	}
 	a.home:hover
@@ -48,42 +48,30 @@ function Clickheretoprint()
 Print <br><br>
 <a class="home" href="javascript:Clickheretoprint()">Print</a>
 <div id="print_content" style="width: 400px;">
-<strong>Ticket Reservation Details</strong><br><br>
+<strong>Reservation Details</strong><br><br>
 <?php
 include('db.php');
-if(isset($_POST['roomnumber']))
+if(isset($_GET['date']))
 {
 $id=$_GET['id'];
-$roomnumber=$_GET['roomnumber'];
-$result = mysql_query("SELECT * FROM customer WHERE id='$id'");
+$date=$_GET['date'];
+//$fname=$_GET['fname'];
+//$lname=$_GET['lname'];
+//$address=$_GET['address'];
+//$contact=$_GET['contact'];
+$result = mysql_query("SELECT * FROM customer WHERE date='$id'");
 while($row = mysql_fetch_array($result))
 	{
-		echo 'Transaction Number: '.$row['transaction'].'<br>';
+		echo 'Date of Reservation: '.$row['date'].'<br>';
 		echo 'Name: '.$row['fname'].' '.$row['lname'].'<br>';
 		echo 'Address: '.$row['address'].'<br>';
 		echo 'Contact: '.$row['contact'].'<br>';
-		//echo 'Payable: '.$row['payable'].'<br>';
+		
 	}
 }
-/*$results = mysql_query("SELECT * FROM reserve WHERE transaction='$id'");
-while($rows = mysql_fetch_array($results))
-	{
-		$ggagaga=$rows['room'];
-		echo 'Route and Type of Bus: ';
-		$resulta = mysql_query("SELECT * FROM room WHERE id='$ggagaga'");
-		while($rowa = mysql_fetch_array($resulta))
-			{
-			echo $rowa['route'].'     :'.$rowa['type'];
-			$time=$rowa['time'];
-			}
-		echo 'Time of Departure: '.$time;
-		echo '<br>';
-		echo 'Seat Number: '.$setnum.'<br>';
-		echo 'Date Of Travel: '.$rows['date'].'<br>';
-		
-	}*/
+
 ?>
 </div>
-<a class="home" href="index.php">Home</a>
+<a class="home" href="dashboard.php">Dashboard</a>
 </body>
 </html>

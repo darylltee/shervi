@@ -118,7 +118,7 @@
 		div.homelogo
 		{
 			position:absolute;
-			left:250px;
+			left:263px;
 			top:5px;
 		}
 	</style>
@@ -137,7 +137,7 @@
 		
 				<li class="current"><a href="index.php">Home</a></li>
 				<li><a href="gallery.php">Gallery</a></li>
-				<li><a href=".php">Location</a></li>				
+				<li><a href="location.php">Location</a></li>				
 				<li><a href="contact.php">Contact Us</a></li>
 				<li><a href="otherinfo.php">Other Info</a></li>
 			</ul>

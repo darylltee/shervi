@@ -33,7 +33,7 @@
 		
 				<li><a href="index.php">Home</a></li>
 				<li><a href="gallery.php">Gallery</a></li>
-				<li><a href=".php">Location</a></li>				
+				<li><a href="location.php">Location</a></li>				
 				<li><a href="contact.php">Contact Us</a></li>
 				<li><a href="otherinfo.php">Other Info</a></li>
 			</ul>
@@ -140,8 +140,8 @@ font-weight:italic;
 if(isset($_POST['roomnumber']))
 {
 	include('db.php');
-	$roomtype=$_POST['roomnumber'];
-  $roomnumber = "";
+	//$roomtype=$_POST['roomnumber'];
+    $roomtype =$_POST ['roomnumber'];
 	$date=$_POST['date'];
 	$numofperson=$_POST['numofperson'];
 	$result = mysql_query("SELECT * FROM room WHERE id='$roomtype'");
@@ -221,14 +221,7 @@ if (b==null || b=="")
 
 
 						
-						<!--admin login
-						<h2 class="accordion-header" style="height: 18px; margin-bottom: 15px; color: Khaki  ; background: none repeat scroll 0px 0px teal;">Admin Login</h2>
-						<div class="accordion-content" style="margin-bottom: 15px;">
-							<form action="login.php" method="post" style="margin-bottom:none;">
-							<span style="margin-right: 11px;">Username: <input type="text" name="username" style="width: 165px; margin-left: 15px; border: 3px double #CCCCCC; padding:5px 10px;"/></span><br>
-							<span style="margin-right: 11px;">Password: <input type="password" name="password" style="width: 165px; margin-left: 15px; border: 3px double #CCCCCC; padding:5px 10px;"/></span><br><br>
-							<input type="submit" id="submit" class="medium gray button" value="Login" style="height: 34px; margin-left: 15px; width: 191px; padding: 5px; border: 3px double rgb(204, 204, 204);" />
-							</form> -->
+						
 						</div> 
 					</div>
 			</div>
