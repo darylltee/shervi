@@ -1,6 +1,12 @@
 <html>
 <body>
+<script src = "../js/jquery-2.1.1.min.js"> </script>
+<script src = "../js/jquery.print.js"> </script>
+
+
 <style>
+
+
 	body
 	{
 		background-image:url('bg.jpg');

@@ -13,9 +13,25 @@
 
 <!--Edit pop up menu-->
 <link href="src/facebox.css" media="screen" rel="stylesheet" type="text/css" />
-   <script src="lib/jquery.js" type="text/javascript"></script>
+   <script src="../js/jquery-2.1.1.min.js" type="text/javascript"></script>
+
+	<script src = "../js/jquery.print.js"> </script>
+	<script >
+		$(document).on("click",".print_b",function(e)
+		{	
+		
+			var parent = $(this).parents().find(".print_home");
+			console.log(parent);	
+			parent.print();
+
+		});
+	</script>
+
   <script src="src/facebox.js" type="text/javascript"></script>
   <script type="text/javascript">
+
+
+
     jQuery(document).ready(function($) {
       $('a[rel*=facebox]').facebox({
         loadingImage : 'src/loading.gif',
@@ -23,7 +39,120 @@
       })
     })
   </script>
+  <style>
+  @media print {
+		.rating_period
+		{
+			margin-left: -27px !important;
+			margin-right: 22px !important;
+			margin-bottom: 2px;
+		}
+
+		*{
+			background: transparent;
+			color: black !important;
+			text-shadow: none !important;
+			filter:none !important;
+			-ms-filter: none !important;
+		}
+		.hide_for_print
+		{
+			display: block !important;
+		}
+		a, a:visited {
+			text-decoration: underline;
+		}
+
+		a[href]:after {
+			content: " " !important;
+		}
+		abbr[title]:after {
+			content: " (" attr(title) ")";
+		}
+		 .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+		content: "";
+		}
+		pre, blockquote {
+			border: 1px solid #999;
+			page-break-inside: avoid;
+		}
+		thead {
+			display: table-header-group;
+		}
+		tr, img {
+			page-break-inside: avoid;
+		}
+		img {
+			max-width: 100% !important;
+		}
+		 @page 
+		 {
+		   margin:1cm;
+		   size:8.5in 11in;
+		   orphans:4; 
+		   widows:2;
+
+		 } 
+
+		.no_print
+		{
+			display: none !important;
+		}
+		p, h2, h3 {
+			orphans: 3;
+			widows: 3;
+		}
+		h2, h3 {
+			page-break-after: avoid;
+		}
+		table:before 
+		{ 
+			/*content: url("../image_core/ssc-a.png");*/
+			position: fixed;left:100%;top:100%;opacity:0.1; 
+			margin-left:100px;
+		}
+		table:nth-child(odd)
+		{
+			margin-top: 1%;
+			margin-bottom: 1% !important;
+		}
+
+		table:nth-child(even)
+		{
+			margin-bottom: 1% !important;
+		}
+		table tr td,table th
+		{
+			font-size: 10px !important;
+			white-space: none !important;
+			padding:0px !important;
+		}
+		fieldset
+		{
+			border:none !important;
+			box-shadow:none !important;
+		}
+		table
+		{
+			margin: 0% !important;
+			
+			border:none !important;
+		}
+		input[type='text']{padding:0px !important;background: transparent !important;border:none !important;}
+
+		span{text-align: left !important;}
+		br {display: none !important;}
+		table:last-child
+		{
+			margin-bottom: 0% !important;
+		}
+		table { page-break-inside : avoid;width:100% !important;}
+
+
+		}
+
   
+  </style>
 </head>
 <body>
 	<div id="container">
@@ -71,7 +200,7 @@
 				</ul>
 				
 				<!--dashboard table-->
-				<div id="content" class="clearfix">
+				<div id="content" class="print_home clearfix">
 					<label for="filter">Filter</label> <input type="text" name="filter" value="" id="filter" />
 					<table cellpadding="1" cellspacing="1" id="resultTable">
 						<thead>
@@ -116,7 +245,7 @@
 						</tbody>
 					</table>
 				</div>
-
+				 <a href = '#' class ='print_b no_print' style = 'float:right;' > Print </a>
 				<div class="clearfix"></div>
 			</div>
 			<div class="clearfix"></div>
